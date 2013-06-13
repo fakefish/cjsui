@@ -1,0 +1,123 @@
+/*! menu */
+
+//Base
+//-----------------
+.menu {
+	list-style: none;
+	padding: 0;
+
+	li {
+		display: inline-block;
+
+		a{
+			padding: @paddingLarge @paddingLarge*3;
+			color: @styleBgColor;
+			text-decoration: none;
+			display: inline-block;
+
+			.fn-border-radius(@styleBrRad);
+			.fn-transition(background-color @styleColorToggleTime linear);
+
+			&:focus,
+			&:hover {
+				color: @styleBgColorHover;
+				background: @styleShallowBg;
+
+				.fn-transition(all @styleColorToggleTime linear);
+			}
+
+			&:active {
+				color: @styleBgColorActive;
+				background: @styleLightBg;
+				
+				.fn-transition(all 0 linear);
+			}
+		}
+	}
+
+	.menu-selected {
+		color: @styleFtColor;
+
+		&:focus,
+		&:hover {
+			color: @styleFtColor;
+		}
+
+		&:active {
+			color: @styleBgColorActive;
+		}
+	}
+
+	.menu-title {
+		color: @styleBgColor;
+		background: @styleBodyColor;
+		padding: @paddingLarge @paddingLarge*3;
+		border-right: 1px @styleShallowBg solid;
+
+		&:focus,
+		&:hover {
+			color: @styleBgColor;
+			background: @styleBodyColor;
+		}
+
+		&:active {
+			color: @styleBgColor;
+			background: @styleBodyColor;
+		}
+	}
+
+	&.menu-bar {
+		background: @styleBgColor;
+
+		.fn-border-radius(@styleBrRad);
+
+		li {
+
+			a{
+				padding: @paddingLarge*1.5 @paddingLarge*3;
+				color: @styleLightBg;
+				text-decoration: none;
+				display: inline-block;
+
+				.fn-border-radius(0);
+				.fn-transition(background-color @styleColorToggleTime linear);
+
+				&:focus,
+				&:hover {
+					color: @styleAntiFtColor;
+					background: @styleBgColorHover;
+
+					.fn-transition(all @styleColorToggleTime linear);
+				}
+
+				&:active {
+					color: @styleAntiFtColor;
+					background: @styleBgColorActive;
+					
+					.fn-transition(all 0 linear);
+				}
+			}
+		}
+
+		.menu-selected {
+			color: @styleAntiFtColor;
+			background: @styleBgColorActive;
+
+			&:focus,
+			&:hover {
+				background: @styleBgColorActive;
+			}
+
+			&:active {
+				background: @styleBgColorActive;
+			}
+		}
+
+		.menu-title {
+			background: transparent;
+			padding: @paddingLarge*1.5 @paddingLarge*3;
+			border-right: 1px @styleLightBg solid;
+			color: @styleAntiFtColor;
+		}
+	}
+}
