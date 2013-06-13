@@ -1,0 +1,63 @@
+/*! dropdownmenu */
+
+//Base
+//-----------------
+.ddm {
+	padding: 0;
+	display: inline-block;
+	border: @styleBr;
+	background: @styleShallowBg;
+	position: relative;
+
+	.fn-border-radius(@styleBrRad);
+}
+
+.ddm > li:not(.ddm-arrow):not(.ddm-divider) {
+	padding: @paddingSmall*1.2 @paddingSmall*4;
+	margin: @styleBoxPadding/5;
+	list-style: none;
+	z-index: 1;
+	position: relative;
+
+	.fn-border-radius(@styleBrRadSmall);
+
+	&:focus,
+	&:hover{
+		cursor: pointer;
+		background: @styleBgColorHover;
+	}
+
+	&:focus > a,
+	&:hover > a{
+		color: @styleAntiFtColor;
+	}
+
+	&:active{
+		background: @styleBgColorActive;
+	}
+}
+
+.ddm > li > a {
+	text-decoration: none;
+	color: @styleFtColor;
+}
+
+.ddm > li.ddm-divider {
+	padding: 0;
+	margin: @styleBrRad 0;
+	height: 1px;
+	background: lighten(@styleBrColor, 5%);
+	width: 100%;
+	list-style: none;
+}
+
+.ddm-arrow{
+	list-style: none;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top:-.3em;
+	font-size: 40px;
+	color: @styleShallowBg;
+	z-index: 0;
+}

@@ -1,0 +1,44 @@
+/*! alert */
+
+//Base
+//-----------------
+.alt {
+	display: block;
+	padding: @paddingMedium @paddingMedium*2;
+	width: auto;
+	position: relative;
+	border: 1px @styleBgColor solid;
+
+	.fn-border-radius(@styleBrRad);
+
+	p{
+		margin-bottom: 0;
+	}
+}
+
+.alt-warning{
+	background: lighten( @styleWarningColor , 24% );
+	border-color: @styleWarningColor;
+
+	p{
+		color: darken( @styleWarningColor , 25% );
+	}
+}
+
+.alt-error{
+	background: lighten( @styleErrorColor , 24% );
+	border-color: @styleErrorColor;
+
+	p{
+		color: darken( @styleErrorColor , 25% );
+	}
+}
+
+.alt-success{
+	background: lighten( @styleSuccessColor , 30% );
+	border-color: @styleSuccessColor;
+
+	p{
+		color: darken( @styleSuccessColor , 25% );
+	}
+}

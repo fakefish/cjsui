@@ -1,0 +1,29 @@
+/*! progress bar */
+
+//Base
+//-----------------
+.pbar {
+	width: 100%;
+	background: @styleShallowBg;
+	height: @styleBrRadBig*2;
+	position: relative;
+	display: inline-block;
+
+	.fn-border-radius(@styleBrRadBig);
+}
+
+.pbar-ed{
+	background: @styleBgColor;
+	height: 100%;
+
+	.fn-border-radius(@styleBrRadBig 0 0 @styleBrRadBig);
+}
+
+.pbar-lock{
+	position: absolute;
+	height: 100%;
+	right: 0;
+	top: 0;
+	background: @styleBgColorActive;
+	.fn-border-radius(0 @styleBrRadBig @styleBrRadBig 0);
+}

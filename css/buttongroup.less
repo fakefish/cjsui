@@ -1,0 +1,65 @@
+/*! buttongroup */
+
+//Base
+//-----------------
+.btng {
+	display: inline-block;
+	font-size: 0;
+}
+
+.btng-item {
+	background: @styleBgColor;
+	color: @styleAntiFtColor;
+	cursor: pointer;
+	float: left;
+	
+	.fn-transition(background-color @styleColorToggleTime linear);
+
+	&:focus:not(.btng-lock):not(.btng-divider),
+	&:hover:not(.btng-lock):not(.btng-divider) {
+		background: @styleBgColorHover;
+		.fn-transition(background-color @styleColorToggleTime linear);
+	}
+
+	&:active:not(.btng-lock):not(.btng-divider),
+	&.btng-focus {
+		background: @styleBgColorActive;
+		.fn-transition(background-color 0 linear);
+	}
+}
+
+.btng-item:first-child {
+	.fn-border-radius(@styleBrRad 0 0 @styleBrRad);
+}
+.btng-item:last-child {
+	.fn-border-radius(0 @styleBrRad @styleBrRad 0);
+}
+
+.btng-lock {
+	cursor: default;
+	color: @styleFtColor;
+	background:  @styleBodyColor;
+}
+
+.btng-divider{
+	cursor: default;
+	background:  @styleLightBg;
+	width: 2px;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+//Size
+//-----------------
+.btng-small > .btng-item {
+	padding: @paddingSmall @paddingSmall*2.6;
+	font-size: @baseFontSize*0.85; //14*0.85 = 12
+}
+.btng-medium > .btng-item {
+	padding: @paddingMedium @paddingMedium*2.2;
+	font-size: @baseFontSize*1.14; //14*1.14 = 16
+}
+.btng-large > .btng-item {
+	padding: @paddingLarge @paddingLarge*2;
+	font-size: @baseFontSize*1.58; //14*1.57 = 22
+}

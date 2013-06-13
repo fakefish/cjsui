@@ -1,0 +1,77 @@
+/*! input */
+
+//Base
+//-----------------
+.ipt {
+	display: block;
+	padding: 0 12px + @styleIptBrWidth;
+	width: auto;
+	position: relative;
+}
+.ipt-text {
+	border: @styleIptBr;
+	padding: .6em 12px;
+	outline:none;
+	vertical-align: middle;
+	width: 100%;
+	position: relative;
+	left: -12px - @styleIptBrWidth;
+	display: block;
+	-webkit-appearance: none; //iphone & ipad input shadow
+
+	.fn-border-radius(@styleBrRad);
+	.fn-transition(border-color @styleColorToggleTime linear);
+	.fn-box-shadow(0 0 0 transparent inset);
+	.ipt-span2
+
+	&:hover{
+		border-color: @styleLightBgHover;
+		.fn-transition(border-color 0 linear);
+	}
+
+	&:focus,
+	&:active{
+		border-color: @styleBgColorActive;
+
+		.fn-transition(border-color @styleColorToggleTime linear);
+	}
+}
+
+.ipt-error{
+	border-color: @styleErrorColor;
+
+	&:hover{
+		border-color: @styleErrorColor;
+	}
+
+	&:focus,
+	&:active{
+		border-color: @styleErrorColor;
+	}
+} 
+
+.ipt-success{
+	border-color: @styleSuccessColor;
+
+	&:hover{
+		border-color: @styleSuccessColor;
+	}
+
+	&:focus,
+	&:active{
+		border-color: @styleSuccessColor;
+	}
+}
+
+.ipt-disabled{
+	background: @styleShallowBg;
+	color: @styleBgColor;
+	&:hover{
+		border-color: @styleLightBg;
+	}
+
+	&:focus,
+	&:active{
+		border-color: @styleLightBg;
+	}
+}

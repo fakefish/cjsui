@@ -1,0 +1,40 @@
+/*! button */
+
+//Base
+//-----------------
+.btn {
+	background: @styleBgColor;
+	color: @styleAntiFtColor;
+	cursor: pointer;
+	text-decoration: none;
+	display:inline-block;
+
+	.fn-border-radius(@styleBrRad);
+	.fn-transition(background-color @styleColorToggleTime linear);
+
+	&:focus,
+	&:hover{
+		background: @styleBgColorHover;
+		.fn-transition(background-color @styleColorToggleTime linear);
+	}
+
+	&:active{
+		background: @styleBgColorActive;
+		.fn-transition(background-color 0 linear);
+	}
+}
+
+//Size
+//-----------------
+.btn-small {
+	padding: @paddingSmall @paddingSmall*2.4;
+	font-size: @baseFontSize*0.85; //14*0.85 = 12
+}
+.btn-medium {
+	padding: @paddingMedium @paddingMedium*2.4;
+	font-size: @baseFontSize*1.14; //14*1.14 = 16
+}
+.btn-large {
+	padding: @paddingLarge @paddingLarge*3.2;
+	font-size: @baseFontSize*1.58; //14*1.57 = 22
+}
