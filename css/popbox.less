@@ -8,6 +8,7 @@
 	border: @styleBr;
 	background: @styleShallowBg;
 	position: relative;
+	overflow: visible;
 
 	.fn-border-radius(@styleBrRad);
 }
@@ -15,9 +16,9 @@
 .pb-arrow{
 	list-style: none;
 	position: absolute;
-	font-size: 40px;
-	color: @styleShallowBg;
-	z-index: 0;
+	width: 0;
+	line-height: 0;
+	height: 0;
 
 	.pb-arrow-top;
 }
@@ -25,30 +26,46 @@
 //Arrow Direction
 //-----------------
 .pb-arrow-top{
-	width: 100%;
-	text-align: center;
-	top:-.3em;
-	left: 0;
+	top:-.8em;
+	left: 50%;
+	margin-left: -.6em;
+	border-right: transparent .8em solid;
+	border-top: transparent 0 solid;
+	border-left: transparent .8em solid;
+	border-bottom: @styleShallowBg .8em solid;
 }
 
 .pb-arrow-bottom{
-	bottom:-.25em;
+	bottom:-.8em;
 	top:auto;
+	left: 50%;
+	margin-left: -.6em;
+	border-right: transparent .8em solid;
+	border-top: @styleShallowBg .8em solid;
+	border-left: transparent .8em solid;
+	border-bottom: transparent 0 solid;
 }
 
 .pb-arrow-left,
 .pb-arrow-right{
 	top:50%;
-	width: auto;
-	margin-top: -10px;
+	margin-top: -.6em;
 }
 
 .pb-arrow-left{
-	left: -.3em;
+	left: 0;
 	text-align: left;
+	border-right: @styleShallowBg .6em solid;
+	border-top: transparent .6em solid;
+	border-left: transparent 0 solid;
+	border-bottom: transparent .6em solid;
 }
 
 .pb-arrow-right{
-	right: -.3em;
-	text-align: right;
+	left:auto;
+	right: -.6em;
+	border-right: transparent 0 solid;
+	border-top: transparent .6em solid;
+	border-left: @styleShallowBg .6em solid;
+	border-bottom: transparent .6em solid;
 }
