@@ -5,6 +5,7 @@
 .menu {
 	list-style: none;
 	padding: 0;
+	white-space: nowrap;
 
 	li {
 		display: inline-block;
@@ -119,5 +120,57 @@
 			border-right: 1px @styleLightBg solid;
 			color: @styleAntiFtColor;
 		}
+	}
+
+	&.menu-vertical {
+		li{
+			width: 100%;
+			display: block;
+
+			a{
+				width: 100%;
+				padding: @paddingLarge 0;
+				text-align: center;
+			}
+		}
+
+		.menu-title {
+			border-right: 0;
+			text-align: center;
+			padding: @paddingLarge 0;
+			border-bottom: 1px @styleShallowBg solid;
+			margin-bottom: 0.1em;
+		}
+
+		&.menu-bar{
+			padding: @styleBrRad 0;
+
+			li{
+				width: 100%;
+				display: block;
+
+				a{
+					width: 100%;
+					padding: @paddingLarge 0;
+					text-align: center;
+				}
+			}
+
+			.menu-title {
+				.menu-title;
+				margin-bottom: 0;
+				border-bottom: 1px @styleLightBg solid;
+
+			}
+		}
+	}
+}
+
+
+
+
+@media (max-width: 767px) {
+	.menu {
+		.menu.menu-vertical;
 	}
 }
