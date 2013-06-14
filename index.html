@@ -99,7 +99,7 @@
 				<h5>H5 Title</h5>
 				<h6>H6 Title</h6>
 			</div>
-			<span class="span3">
+			<div class="span3">
 				<h4>Base &amp; Misc</h4>
 				<p>this is P</p>
 				<p>this is <span class="lead">lead</span></p>
@@ -107,6 +107,92 @@
 				<p>this is <strong>strong</strong></p>
 				<p>this is <em>em</em></p>
 				<p>this is <cite>cite</cite></p>
+				<p>this is <abbr title="this is abbr">abbr</abbr> </p>
+				<p>this is <del>delete</del></p>
+				<p>this is <dfn>define</dfn></p>
+				<p>this is <ins>ins</ins></p>
+				<p>this is <mark>mark</mark></p>
+			</div>
+			<div class="span3">
+				<h4> &nbsp;</h4>
+				<p>this is<sub>sub</sub></p>
+				<p>this is<sup>sup</sup></p>
+				<p>this is <samp>samp</samp></p>
+				<p>this is <kbd>kbd</kbd></p>
+				<p>this is <code>code</code></p>
+				<p>this is <var>var</var></p>
+				<p>this is address:<address>
+					Zhejiang, Hangzhou <br>
+					310006<br>
+					Mizhe<br>
+				</address></p>
+				<p>this is blockquote:
+					<blockquote>
+						One small step for man, one giant leap for mankind.
+					</blockquote>
+				</p>
+			</div>
+			<div class="span3">
+				<h4>Text Style</h4>
+				<p class="text-muted">this is text muted</p>
+				<p class="text-success">this is text success</p>
+				<p class="text-error">this is text error</p>
+				<p class="text-warning">this is text warning</p>
+			</div>
+		</die>
+		<div class="row margin-y-small"></div>
+		<div class="row">
+			<span class="span3">
+				<h4>Unordered List</h4>
+				<ul>
+					<li>item1</li>
+					<li>item2</li>
+					<li>
+						item3
+						<ul>
+							<li>item3-1</li>
+							<li>item3-2</li>
+							<li>
+								item3-3
+								<ul>
+									<li>item3-3-1</li>
+									<li>item3-3-2</li>
+									<li>item3-3-3</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>item3</li>
+				</ul>
+			</span>
+			<span class="span3">
+				<h4>Ordered List</h4>
+				<ol>
+					<li>item1</li>
+					<li>item2</li>
+					<li>
+						item3
+						<ol>
+							<li>item3-1</li>
+							<li>item3-2</li>
+							<li>item3-3</li>
+						</ol>
+					</li>
+					<li>item3</li>
+				</ol>
+			</span>
+			<span class="span3">
+				<h4>Definition Lists</h4>
+				<dl>
+		            <dt>Definition term</dt>
+		            <dd>Definition description</dd>
+
+		            <dt>Definition term</dt>
+		            <dd>Definition description</dd>
+
+		            <dt>Definition term</dt>
+		            <dd>Definition description</dd>
+		        </dl>
 			</span>
 			<span class="span3">
 				<h4>Text Align</h4>
@@ -114,7 +200,411 @@
 				<p class="text-center">text center align</p>
 				<p class="text-right">text right align</p>
 			</span>
-		</die>
+		</div>
+		<div class="row margin-y-medium"></div>
+		<div class="row">
+			<h1>Table</h1>
+			<div class="row">
+				<div class="span6">
+					<h4>Default</h4>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>User Name</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Early</td>
+								<td>He</td>
+								<td>@early</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Gangwu</td>
+								<td>Chen</td>
+								<td>@mopvhs</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>fake</td>
+								<td>Wang</td>
+								<td>@fakefish</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Yu</td>
+								<td>Lao</td>
+								<td>@lsave</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="span6">
+					<h4>Striped</h4>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>User Name</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Early</td>
+								<td>He</td>
+								<td>@early</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Gangwu</td>
+								<td>Chen</td>
+								<td>@mopvhs</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>fake</td>
+								<td>Wang</td>
+								<td>@fakefish</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Yu</td>
+								<td>Lao</td>
+								<td>@lsave</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span6">
+					<h4>Border</h4>
+					<table class="table table-border">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>User Name</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Early</td>
+								<td>He</td>
+								<td>@early</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Gangwu</td>
+								<td>Chen</td>
+								<td>@mopvhs</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>fake</td>
+								<td>Wang</td>
+								<td>@fakefish</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Yu</td>
+								<td>Lao</td>
+								<td>@lsave</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="span6">
+					<h4>Border Y</h4>
+					<table class="table table-border-y">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>User Name</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Early</td>
+								<td>He</td>
+								<td>@early</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Gangwu</td>
+								<td>Chen</td>
+								<td>@mopvhs</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>fake</td>
+								<td>Wang</td>
+								<td>@fakefish</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Yu</td>
+								<td>Lao</td>
+								<td>@lsave</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span6">
+					<h4>Border X</h4>
+					<table class="table table-border-x">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>User Name</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Early</td>
+								<td>He</td>
+								<td>@early</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Gangwu</td>
+								<td>Chen</td>
+								<td>@mopvhs</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>fake</td>
+								<td>Wang</td>
+								<td>@fakefish</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Yu</td>
+								<td>Lao</td>
+								<td>@lsave</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="span6">
+					<h4>Border XY</h4>
+					<table class="table table-border-xy">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>User Name</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Early</td>
+								<td>He</td>
+								<td>@early</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Gangwu</td>
+								<td>Chen</td>
+								<td>@mopvhs</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>fake</td>
+								<td>Wang</td>
+								<td>@fakefish</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Yu</td>
+								<td>Lao</td>
+								<td>@lsave</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span6">
+					<h4>Border ALL &amp; Radius</h4>
+					<table class="table table-border-all table-radius">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>User Name</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Early</td>
+								<td>He</td>
+								<td>@early</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Gangwu</td>
+								<td>Chen</td>
+								<td>@mopvhs</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>fake</td>
+								<td>Wang</td>
+								<td>@fakefish</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Yu</td>
+								<td>Lao</td>
+								<td>@lsave</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="span6">
+					<h4>Hover &amp; Center</h4>
+					<table class="table table-hover table-center">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>User Name</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Early</td>
+								<td>He</td>
+								<td>@early</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Gangwu</td>
+								<td>Chen</td>
+								<td>@mopvhs</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>fake</td>
+								<td>Wang</td>
+								<td>@fakefish</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Yu</td>
+								<td>Lao</td>
+								<td>@lsave</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span6">
+					<h4>Tighten</h4>
+					<table class="table table-border-all table-tighten">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>User Name</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Early</td>
+								<td>He</td>
+								<td>@early</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Gangwu</td>
+								<td>Chen</td>
+								<td>@mopvhs</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>fake</td>
+								<td>Wang</td>
+								<td>@fakefish</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Yu</td>
+								<td>Lao</td>
+								<td>@lsave</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="span6">
+					<h4>Expand</h4>
+					<table class="table table-border-all table-expand">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>User Name</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Early</td>
+								<td>He</td>
+								<td>@early</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Gangwu</td>
+								<td>Chen</td>
+								<td>@mopvhs</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>fake</td>
+								<td>Wang</td>
+								<td>@fakefish</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Yu</td>
+								<td>Lao</td>
+								<td>@lsave</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
 		<div class="row margin-y-medium"></div>
 		<div class="row">
 				<h1>Package</h1>

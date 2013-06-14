@@ -16,44 +16,118 @@ p { margin: 0 0 @baseLineHeight/2; }
 	line-height: @baseLineHeight*1.5;
 }
 
+//Text Style
+//-----------------
+.text-muted		{ color: lighten(@styleFtColor,60%); }
+.text-warning 	{ color: @styleWarningColor; }
+.text-error		{ color: @styleErrorColor; }
+.text-success	{ color: @styleSuccessColor; }
+
 //Misc
 //-----------------
 small   { font-size: 85%; }
 strong  { font-weight: bold; }
-em      { font-style: italic; }
-cite    { font-style: normal; }
+del		{ text-decoration: line-through; }
+ins		{ text-decoration: underline; }
+
+cite { 
+	font-style: italic;
+	color: lighten(@styleFtColor,20%);
+}
+
+em,
+dfn,
+var { 
+	font-style: italic; 
+}
+
+abbr[title],
+abbr { 
+	text-transform: uppercase; 
+	cursor: help; 
+	border-bottom: 1px dotted @styleLightBgHover;
+}
+
+mark {
+	background: darken(@styleBodyColor,8%);
+	color: @styleFtColor;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub{
+	bottom: -.25em;
+}
+sup{
+	top: -.5em;
+}
+
+samp,
+kbd,
+code{
+	font-family: monospace,serif,'宋体';
+	font-size: 1em;
+}
+
+code {
+	color: lighten(@styleFtColor,20%);
+	background: darken(@styleBodyColor,5%);
+	padding: .25em .5em;
+
+	.fn-border-radius(@styleBrRadSmall);
+}
+
+address {
+	font-weight: normal;
+	font-style: normal;
+	display: block;
+}
+
+blockquote{
+	font-family: "Georgia", serif;
+	color: lighten(@styleFtColor,30%);
+	font-style: italic;
+	border-left: 5px solid #ddd;
+	padding-left: @baseLineHeight;
+}
 
 //Title
 //-----------------
 h1 {
-	font-size: @baseFontSize*3;
-	line-height: @baseFontSize*3;
-	margin: @baseFontSize*3 0;
-} //14*3 = 42
+	font-size: @baseFontSize*@h1Size;
+	line-height: @baseFontSize*@h1Size;
+	margin: @baseFontSize*@h1Size 0;
+}
 h2 { 
-	font-size: @baseFontSize*2.57;
-	line-height: @baseFontSize*2.57;
-	margin: @baseFontSize*2.57 0;
+	font-size: @baseFontSize*@h2Size;
+	line-height: @baseFontSize*@h2Size;
+	margin: @baseFontSize*@h2Size 0;
 } //14*2.57 = 36
 h3 { 
-	font-size: @baseFontSize*2.14;
-	line-height: @baseFontSize*2.14;
-	margin: @baseFontSize*2.14 0;
+	font-size: @baseFontSize*@h3Size;
+	line-height: @baseFontSize*@h3Size;
+	margin: @baseFontSize*@h3Size 0;
 } //14*2.14 = 30
 h4 { 
-	font-size: @baseFontSize*1.85;
-	line-height: @baseFontSize*1.85;
-	margin: @baseFontSize*1.85 0;
+	font-size: @baseFontSize*@h4Size;
+	line-height: @baseFontSize*@h4Size;
+	margin: @baseFontSize*@h4Size 0;
 } //14*1.85 = 26
 h5 { 
-	font-size: @baseFontSize*1.53;
-	line-height: @baseFontSize*1.53;
-	margin: @baseFontSize*1.53 0;
-} //14*1.53 = 21
+	font-size: @baseFontSize*@h5Size;
+	line-height: @baseFontSize*@h5Size;
+	margin: @baseFontSize*@h5Size 0;
+}
 h6 { 
-	font-size: @baseFontSize;
-	line-height: @baseFontSize;
-	margin: @baseFontSize 0;
+	font-size: @baseFontSize*@h6Size;
+	line-height: @baseFontSize*@h6Size;
+	margin: @baseFontSize*@h6Size 0;
 }
 
 //Text Align
@@ -64,3 +138,18 @@ h6 {
 
 //List & Description
 //-----------------
+ol,
+ul {
+	padding: 0 0 0 40px;
+}
+li{
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+
+dt{
+	font-weight: bold;
+}
+dd {
+	margin-bottom: 10px;
+}

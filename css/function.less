@@ -3,7 +3,7 @@
 //Base
 //-----------------
 .fn-border-radius(@radius) {
-	webkit-border-radius: @radius;
+	-webkit-border-radius: @radius;
 	-moz-border-radius: @radius;
 	border-radius: @radius;
 }
@@ -17,4 +17,24 @@
 	-moz-box-shadow: @shadow;
 	-webkit-box-shadow: @shadow;
 	box-shadow: @shadow;
+}
+
+.fn-border( left , @color:#ccc , @width:1px , @type:solid){
+	border-left:@width @type @color;
+}
+
+.fn-border( right , @color:#ccc , @width:1px , @type:solid){
+	border-right:@width @type @color;
+}
+
+.fn-border( top , @color:#ccc , @width:1px , @type:solid){
+	border-top:@width @type @color;
+}
+
+.fn-border( bottom , @color:#ccc , @width:1px , @type:solid){
+	border-bottom:@width @type @color;
+}
+
+.fn-border( all , @color:#ccc , @width:1px , @type:solid){
+	border:@width @type @color;
 }
