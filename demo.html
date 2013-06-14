@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>demo</title>
+</head>
+<body>
+	<div id="container"></div>
+	<script type="text/javascript">
+	var x, y, z;var lastUpdate = 0;
+
+	alert(window.OrientationEvent);
+	if (window.DeviceMotionEvent) {  
+	    window.addEventListener('devicemotion',deviceMotionHandler, false);  
+	}
+	function deviceMotionHandler(eventData){
+		var acceleration =eventData.accelerationIncludingGravity;
+		var curTime = new Date().getTime();
+		if ((curTime - lastUpdate) > 100) {
+
+			var diffTime = (curTime - lastUpdate);
+			lastUpdate = curTime;
+
+		      x = acceleration.x;  
+		      y = acceleration.y;  
+		      z = acceleration.z;  
+		   		
+		   	 document.body.innerHTML = x + ',' +y+','+z;
+		}    
+	}
+	</script>
+</body>
+</html>
